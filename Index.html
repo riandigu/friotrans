@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Friotrans - Transporte Refrigerado</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #002855;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #002855;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo img {
+      height: 50px;
+      cursor: pointer;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 400;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: #00aaff;
+    }
+    .hero {
+      position: relative;
+      height: 90vh;
+      background-image: url('camion.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      color: white;
+      font-size: 1rem;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top:0; left:0; right:0; bottom:0;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+    .hero-text {
+      position: relative;
+      max-width: 600px;
+      z-index: 1;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+    .hero-text h1 {
+      font-weight: 400;
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+    .hero-text p {
+      font-weight: 300;
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+    .hero-text button {
+      background-color: #00aaff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .hero-text button:hover {
+      background-color: #008ecc;
+    }
+    .hero-small-text {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 0.9rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+      z-index: 2;
+    }
+    section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+      color: #002855;
+      scroll-margin-top: 100px; /* esto ayuda a bajar el ancla para que el titulo no quede pegado al header */
+    }
+    h2 {
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    p {
+      font-weight: 300;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    ul {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    #contacto form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    #contacto input, #contacto textarea {
+      padding: 12px;
+      border: 1px solid #002855;
+      border-radius: 5px;
+      font-size: 1rem;
+      color: #002855;
+      resize: vertical;
+    }
+    #contacto input::placeholder,
+    #contacto textarea::placeholder {
+      color: #004080;
+    }
+    #contacto button {
+      background-color: #002855;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      padding: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 400;
+      transition: background-color 0.3s ease;
+    }
+    #contacto button:hover {
+      background-color: #0059b3;
+    }
+    footer {
+      background-color: #001f40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+    @media (max-width: 600px) {
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+      .hero-text p {
+        font-size: 1rem;
+      }
+      nav a {
+        margin-left: 10px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header id="header">
+  <div class="logo" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+    <img src="logo.png" alt="Logo de Friotrans SpA, empresa de transporte refrigerado" />
+  </div>
+  <nav>
+    <a href="#header">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#quienes-somos">¿Quiénes somos?</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section id="inicio" class="hero">
+  <div class="hero-text">
+    <h1>Transportes Refrigerados</h1>
+    <p>Conectamos el país con temperatura y confianza</p>
+    <button onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Contáctanos</button>
+  </div>
+  <div class="hero-small-text">
+    Texto pequeño, aclaración o slogan en blanco para verse sobre el camión
+  </div>
+</section>
+
+<section id="servicios">
+  <h2>Servicios</h2>
+  <p>
+    En <strong>Friotrans SpA</strong> ofrecemos soluciones de transporte diseñadas para satisfacer todas tus necesidades logísticas, tanto para cargas refrigeradas como generales y maquinaria pesada. Nuestros servicios de transporte refrigerado garantizan una temperatura controlada de hasta <strong>-30 °C</strong>, lo que permite trasladar productos altamente sensibles como carnes, mariscos, helados y otros perecibles que requieren condiciones extremas de frío.
+  </p>
+  <ul>
+    <li><strong>Transporte de carga refrigerada</strong>: Lácteos, carnes, frutas, verduras, productos del mar y más, con control térmico de hasta <strong>-30 °C</strong>.</li>
+    <li><strong>Transporte de carga en general</strong>: Envíos nacionales de mercancía seca o sin requerimientos térmicos.</li>
+    <li><strong>Transporte de maquinarias</strong>: Traslado seguro de equipos y maquinaria pesada dentro del territorio nacional.</li>
+    <li><strong>Distribución con temperatura controlada</strong>: Ideal para supermercados, centros de distribución y puntos de venta.</li>
+    <li><strong>Cobertura nacional</strong>: Realizamos rutas programadas y especiales a lo largo de todo Chile.</li>
+    <li><strong>Monitoreo en tiempo real</strong>: Supervisión constante de la temperatura y ubicación de la carga durante el viaje.</li>
+    <li><strong>Cumplimiento normativo</strong>: Operamos bajo estrictas normas sanitarias y de seguridad.</li>
+  </ul>
+  <p>
+    En Friotrans nos adaptamos a las necesidades específicas de cada cliente, asegurando puntualidad, confianza y un servicio de alta calidad que protege tu carga desde el origen hasta su destino final.
+  </p>
+</section>
+
+<section id="quienes-somos">
+  <h2>¿Quiénes somos?</h2>
+  <p>
+    Friotrans SpA es una empresa chilena fundada en 2017, especializada en el transporte de alimentos y mercaderías que requieren control de temperatura. Desde nuestros inicios, hemos recorrido el país ofreciendo un servicio confiable, puntual y adaptado a las exigencias logísticas del rubro alimentario y comercial.
+  </p>
+  <p>
+    Nuestro compromiso es mantener la cadena de frío en cada trayecto, asegurando que los productos lleguen en óptimas condiciones a su destino. Contamos con un equipo profesional y flota acondicionada para cubrir rutas a lo largo de todo Chile, con una atención centrada en la calidad, la seguridad y la satisfacción de nuestros clientes.
+  </p>
+</section>
+
+<section id="contacto">
+  <h2>Formulario de Contacto</h2>
+
+  <p><strong>Empresa:</strong> Friotrans SpA</p>
+  <p><strong>RUT:</strong> 76.238.965-7</p>
+  <p><strong>Dirección:</strong> Comuna de Padre Hurtado</p>
+  <p><strong>Email:</strong> friotrans@friotrans.cl</p>
+  <p><strong>Teléfono:</strong> +56 9 6400 1209</p>
+
+  <form action="https://formsubmit.co/friotrans@friotrans.cl" method="POST" onsubmit="alert('Mensaje enviado (simulado). Cuando tengas hosting real, lo conectamos.'); return true;">
+    <input type="text" name="nombre" placeholder="Tu nombre completo" required autocomplete="name" />
+    <input type="email" name="email" placeholder="Tu correo electrónico" required autocomplete="email" />
+    <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_next" value="https://friotrans.cl/gracias.html" />
+    <button type="submit">Enviar Mensaje</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Friotrans - Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
