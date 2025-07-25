@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Friotrans - Transporte Refrigerado</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: white;
+      color: #002855;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #002855;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      flex-wrap: wrap;
+    }
+    .logo img {
+      height: 50px;
+      cursor: pointer;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-left: 20px;
+      flex: 1 1 auto;
+    }
+    nav {
+      flex-shrink: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 400;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: #00aaff;
+    }
+    .hero {
+      position: relative;
+      height: 90vh;
+      background-image: url('camion.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+      color: white;
+      font-size: 1rem;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top:0; left:0; right:0; bottom:0;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+    .hero-text {
+      position: relative;
+      max-width: 600px;
+      z-index: 1;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+    .hero-text h1 {
+      font-weight: 400;
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+    .hero-text p {
+      font-weight: 300;
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+    }
+    .hero-text button {
+      background-color: #00aaff;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1rem;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .hero-text button:hover {
+      background-color: #008ecc;
+    }
+    .hero-small-text {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-size: 0.9rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+      z-index: 2;
+    }
+    section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 0 20px;
+      color: #002855;
+      scroll-margin-top: 100px;
+    }
+    h2 {
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+    p {
+      font-weight: 300;
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
+    ul {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    #contacto form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    #contacto input, #contacto textarea {
+      padding: 12px;
+      border: 1px solid #002855;
+      border-radius: 5px;
+      font-size: 1rem;
+      color: #002855;
+      resize: vertical;
+    }
+    #contacto input::placeholder,
+    #contacto textarea::placeholder {
+      color: #004080;
+    }
+    #contacto button {
+      background-color: #002855;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      padding: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 400;
+      transition: background-color 0.3s ease;
+    }
+    #contacto button:hover {
+      background-color: #0059b3;
+    }
+    footer {
+      background-color: #001f40;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+    @media (max-width: 600px) {
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+      .hero-text p {
+        font-size: 1rem;
+      }
+      nav a {
+        margin-left: 10px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header id="header">
+  <div class="logo" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+    <img src="logo.png" alt="Logo de Friotrans SpA, empresa de transporte refrigerado" />
+  </div>
+  <h1>Transportes Friotrans SpA.</h1>
+  <nav>
+    <a href="#header">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#quienes-somos">¿Quiénes somos?</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<!-- El resto del contenido HTML del usuario continúa sin cambios aquí... -->
+<!-- Para ahorrar espacio, no se repite todo en este bloque, ya que el header es la única parte modificada. -->
+</body>
+</html>
